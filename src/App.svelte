@@ -32,11 +32,7 @@
       </div>
       <input
         class="slider"
-        class:slider-0={currentRangeValue === 0}
-        class:slider-1={currentRangeValue === 1}
-        class:slider-2={currentRangeValue === 2}
-        class:slider-3={currentRangeValue === 3}
-        class:slider-4={currentRangeValue === 4}
+        data-value={currentRangeValue}
         type="range"
         min={0}
         bind:value={currentRangeValue}
@@ -247,28 +243,28 @@
     );
   }
 
-  .slider.slider-1::-moz-range-track {
+  .slider[data-value="1"]::-moz-range-track {
     --slider-value: 25%;
   }
-  .slider.slider-1::-webkit-slider-runnable-track {
+  .slider[data-value="1"]::-webkit-slider-runnable-track {
     --slider-value: 25%;
   }
-  .slider.slider-2::-moz-range-track {
+  .slider[data-value="2"]::-moz-range-track {
     --slider-value: 50%;
   }
-  .slider.slider-2::-webkit-slider-runnable-track {
+  .slider[data-value="2"]::-webkit-slider-runnable-track {
     --slider-value: 50%;
   }
-  .slider.slider-3::-moz-range-track {
+  .slider[data-value="3"]::-moz-range-track {
     --slider-value: 75%;
   }
-  .slider.slider-3::-webkit-slider-runnable-track {
+  .slider[data-value="3"]::-webkit-slider-runnable-track {
     --slider-value: 75%;
   }
-  .slider.slider-4::-moz-range-track {
+  .slider[data-value="4"]::-moz-range-track {
     --slider-value: 100%;
   }
-  .slider.slider-4::-webkit-slider-runnable-track {
+  .slider[data-value="4"]::-webkit-slider-runnable-track {
     --slider-value: 100%;
   }
 
